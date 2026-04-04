@@ -29,53 +29,56 @@
       font-size: 0.95rem;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 24px;
+    .list {
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      max-width: 800px;
+      max-width: 600px;
+      gap: 0;
     }
 
     .card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 8px;
       text-decoration: none;
       color: inherit;
+      border-bottom: 1px solid #eee;
+      transition: background 0.15s;
+      border-radius: 8px;
+    }
+
+    .card:first-child { border-top: 1px solid #eee; }
+    .card:hover { background: #f0f0f0; }
+
+    .card-icon { flex-shrink: 0; line-height: 1; }
+
+    .card-body {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      transition: transform 0.15s, box-shadow 0.15s;
+      gap: 4px;
     }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.14);
-    }
-
-    .card-icon { line-height: 1; }
 
     .card-title {
-      font-size: 1.15rem;
+      font-size: 1rem;
       font-weight: bold;
       color: #222;
     }
 
     .card-desc {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #777;
-      line-height: 1.6;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
 
-  <h1>daaaaaai.github.io</h1>
+  <h1><a href="https://github.com/daaaaaai/daaaaaai.github.io" target="_blank" style="color:inherit;text-decoration:none;">daaaaaai.github.io</a></h1>
   <p class="subtitle">Projects</p>
 
-  <div class="grid">
+  <div class="list">
     <a class="card" href="/browser_paint/">
       <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="38" height="38">
         <circle cx="32"   cy="18"   r="10" fill="#f44336"/>
@@ -85,8 +88,10 @@
         <circle cx="18.7" cy="27.1" r="10" fill="#9c27b0"/>
         <circle cx="32"   cy="32"   r="8"  fill="#fff"/>
       </svg></div>
-      <div class="card-title">おえかきアプリ</div>
-      <div class="card-desc">幼児向けブラウザお絵描きアプリ。色・ペンの太さを選んで自由に描ける。</div>
+      <div class="card-body">
+        <div class="card-title">おえかきアプリ</div>
+        <div class="card-desc">幼児向けブラウザお絵描きアプリ。色・ペンの太さを選んで自由に描ける。</div>
+      </div>
     </a>
     <a class="card" href="/color_chart/">
       <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="38" height="38">
@@ -100,8 +105,10 @@
         <rect x="23" y="45" width="20" height="20" fill="#9E9E9E"/>
         <rect x="45" y="45" width="20" height="20" fill="#1a1a1a"/>
       </svg></div>
-      <div class="card-title">Color Chart</div>
-      <div class="card-desc">ゲルハルト・リヒターの作品にインスパイアされたカラーチャートジェネレーター。</div>
+      <div class="card-body">
+        <div class="card-title">Color Chart</div>
+        <div class="card-desc">ゲルハルト・リヒターの作品「Color Chart」にインスパイアされたカラーチャートジェネレーター。なんか色々調整できます。</div>
+      </div>
     </a>
     <a class="card" href="/timer/">
       <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="38" height="38">
@@ -111,8 +118,10 @@
         <circle cx="32" cy="34" r="3" fill="#eee"/>
         <rect x="28" y="5" width="8" height="5" rx="2" fill="#eee"/>
       </svg></div>
-      <div class="card-title">タイマー</div>
-      <div class="card-desc">シンプルなブラウザタイマー。時間切れ後もマイナス表示でカウントし続ける。</div>
+      <div class="card-body">
+        <div class="card-title">タイマー</div>
+        <div class="card-desc">シンプルなブラウザタイマー。学会タイマーをインスパイアし、スマホで使いやすいように調整しています。。</div>
+      </div>
     </a>
   </div>
 
