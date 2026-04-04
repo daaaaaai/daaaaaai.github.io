@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daaaaaai.github.io</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f5f5f5;
+      font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 16px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    p.subtitle {
+      color: #888;
+      margin-bottom: 48px;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      padding: 28px 24px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+    }
+
+    .card-icon { font-size: 2.4rem; }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .card-desc {
+      font-size: 0.88rem;
+      color: #777;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>daaaaaai.github.io</h1>
+  <p class="subtitle">Projects</p>
+
+  <div class="grid">
+    <a class="card" href="/browser_paint/">
+      <div class="card-icon">🎨</div>
+      <div class="card-title">おえかきアプリ</div>
+      <div class="card-desc">幼児向けブラウザお絵描きアプリ。色・ペンの太さを選んで自由に描ける。</div>
+    </a>
+  </div>
+
+</body>
+</html>
